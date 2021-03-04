@@ -1,6 +1,2 @@
 craft works
-<<<<<<< HEAD
-listening songs
-=======
 learning
->>>>>>> 4d844943b6dd46a64701defa13b8b671de253d9d
