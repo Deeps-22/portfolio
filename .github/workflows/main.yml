@@ -13,5 +13,5 @@ jobs:
           repository: Deeps-22/Jenkins_proj
 
       - name: after checkout
-        run: ls
+        run:  cp -r source/*
 
