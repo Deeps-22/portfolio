@@ -23,6 +23,8 @@ jobs:
         run: |
           cp -r source-repo/* target-repo/
           cd target-repo
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Copied files from Jenkins_proj"
           git push
