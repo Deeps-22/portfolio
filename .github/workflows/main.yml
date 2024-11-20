@@ -21,7 +21,7 @@ jobs:
 
       - name: Copy Files
         run: |
-          cp -r source-repo/Jenkins_Practice/* target-repo/
+          cp -r source-repo/* target-repo/
           cd target-repo
           git add .
           git commit -m "Copied files from Jenkins_proj"
