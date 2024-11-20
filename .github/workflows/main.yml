@@ -9,6 +9,6 @@ jobs:
 
       - name: checkout
         uses: actions/checkout@v4
-         with:
-	     repository: Deeps-22/Jenkins_proj
-        
+        with:
+          repository: Deeps-22/Jenkins_proj
+
