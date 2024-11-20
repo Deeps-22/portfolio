@@ -6,12 +6,28 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!"
-
-      - name: checkout
+        
+      - name: Checkout Source Repository (Jenkins_proj)
         uses: actions/checkout@v4
         with:
           repository: Deeps-22/Jenkins_proj
+          path: source-repo
 
-      - name: after checkout
-        run:  cp -r Deeps-22/Jenkins_proj/Jenkins_Practice Deeps-22/portfolio
+      - name: Checkout Target Repository (portfolio)
+        uses: actions/checkout@v4
+        with:
+          repository: Deeps-22/portfolio
+          path: target-repo
+
+      - name: Copy Files
+        run: |
+          cp -r source-repo/Jenkins_Practice/* target-repo/
+          cd target-repo
+          git add .
+          git commit -m "Copied files from Jenkins_proj"
+          git push
+
+      - name: after copy
+        run:  ls
+
 
