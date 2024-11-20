@@ -6,3 +6,9 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!"
+
+      -name: checkout
+      uses: actions/checkout@v4
+      with:
+	      repository: Deeps-22/Jenkins_proj
+        
