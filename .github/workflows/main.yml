@@ -12,10 +12,16 @@ jobs:
         with:
           repository: Deeps-22/Jenkins_proj
           path: source-repo
+          
+      - name: Checkout Target Repository (Portfolio)
+        uses: actions/checkout@v4
+        with:
+          repository: Deeps-22/portfolio
+          path: target-repo
 
       - name: Copy Files
         run: |
-          cp -r source-repo/* ./
+          cp -r source-repo/* target-repo/build
           cd target-repo
           git config --global user.name ""
           git config --global user.email "" 
