@@ -21,7 +21,7 @@ jobs:
 
       - name: Copy Files
         run: |
-          cp -r source-repo/* target-repo/build
+          cp -r source-repo/* target-repo
           cd target-repo
           git config --global user.name "Deeps-22"
           git config --global user.email "deepssubramanian2000@gmail.com" 
